@@ -4,9 +4,9 @@ import SHOP_DATA from "./shop.data";
 import CollectionPreview from "../../components/collection-preview/collection-preview";
 
 class ShopPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   state = {
     collections: SHOP_DATA

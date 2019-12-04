@@ -3,9 +3,9 @@ import "./directory.scss";
 import MenuItem from "../menu-item/menu-item";
 
 class Directory extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   state = {
     sections: [
