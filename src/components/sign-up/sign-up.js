@@ -28,23 +28,19 @@ class SignUp extends Component {
       return;
     }
 
-    // try {
-      console.log(displayName)
-      console.log(email)
-      console.log(password)
-       const { user } = auth.createUserWithEmailAndPassword(email, password);
-       console.log(user);
-      
-    //   await createUserProfileDocument(user, { displayName });
-    //   this.setState({
-    //     displayName: "",
-    //     email: "",
-    //     password: "",
-    //     confirmPassword: ""
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    try {
+      const { user } = auth.createUserWithEmailAndPassword(email, password);
+
+      await createUserProfileDocument(user, { displayName });
+      this.setState({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   handleChange = event => {
