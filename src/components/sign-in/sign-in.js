@@ -8,9 +8,9 @@ import { signInWithGoogle } from "../../firebase/firebase.utils";
 import "./sign-in.scss";
 
 class SignIn extends Component {
-  constructor(props) {
-    super(props);
-  }
+//   constructor(props) {
+//     super(props);
+//   }
 
   state = {
     email: "",
