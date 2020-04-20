@@ -20,11 +20,11 @@ class App extends Component {
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
-
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      console.log('userAuth')
+      console.log(userAuth)
       if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
-
+         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
           setCurrentUser({
             id: snapShot.id,
